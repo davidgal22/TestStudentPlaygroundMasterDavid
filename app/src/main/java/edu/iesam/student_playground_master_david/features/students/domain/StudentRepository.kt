@@ -8,4 +8,6 @@ interface StudentRepository {
     fun remove(exp: String)
 
     fun update(student: Student)
+
+    fun findAll(): List<Student>
 }

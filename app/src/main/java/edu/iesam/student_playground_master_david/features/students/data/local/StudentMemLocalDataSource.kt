@@ -21,6 +21,12 @@ class StudentMemLocalDataSource {
     fun update(student: Student) {
         dataSource.put(student.exp, student)
     }
+    fun finAll(): List<Student>{
+       //return dataSource.values.toList()
+        return dataSource.map {
+            student -> student.value
+        }
+    }
 
 
 }
